@@ -1,16 +1,7 @@
 import React from 'react';
 import { mainContainer, countryIconContainer, countryTextContainer } from './styles';
 import PropTypes from 'prop-types';
-import Icon from '@ant-design/icons';
 import CountryIcon from '../atomic/CountrieIcon';
-
-//Start converting SVG into React components
-import { ReactComponent as MXa } from '../../assets/countries/mx.svg';
-//End converting SVG into React components
-
-//Start of converting icons into antdIcons
-const MX = (props) => <Icon component={MXa} {...props} />;
-//End  of converting icons into antdIcons
 
 function CountryBadge(props) {
   const { countryLabel, countryCode } = props;

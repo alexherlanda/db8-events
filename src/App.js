@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, List, Card, Typography, Row, Col, Button, Menu } from 'antd';
+import { Layout, List, Card, Typography, Row, Col, Button } from 'antd';
 import './App.css';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { events } from './models/events';

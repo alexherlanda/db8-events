@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '@ant-design/icons';
+import PropTypes from 'prop-types';
 
 //Start converting SVG into React components
 import { ReactComponent as MXa } from '../../../assets/countries/mx.svg';
@@ -68,5 +69,13 @@ function CountryIcon(props) {
 
   return CIcon;
 }
+
+CountryIcon.propTypes = {
+  countryCode: PropTypes.string.isRequired,
+};
+
+CountryIcon.defaultProps = {
+  countryCode: 'MX',
+};
 
 export default CountryIcon;
