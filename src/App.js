@@ -38,6 +38,7 @@ function App(props) {
                   style={{
                     borderRadius: '15px',
                     minHeight: 400,
+                    backgroundImage: "url('../assets/examples/test.jpeg')",
                   }}
                   bodyStyle={{ padding: '10px' }}
                 >
