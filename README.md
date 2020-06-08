@@ -29,6 +29,18 @@ ES: Hay muchas maneras en que se puede contribuir a DB8 a tener una base da dato
 - Create backend service to handle events and users
 - Create a registration for for events
 
+## Shotouts
+
+This app is created is also possible beacuase the awesome teams of
+
+- react
+- create-react-app
+- antd
+- redux
+- redux-saga
+- axios
+- npm
+
 ## ©️ Licence
 
 DB8 is released under GNU GENERAL PUBLIC LICENSE Version 3

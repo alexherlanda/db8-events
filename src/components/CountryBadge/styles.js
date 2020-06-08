@@ -5,7 +5,7 @@ export const mainContainer = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  //widht: 'fit-content',
+  widht: 'fit-content',
   fontSize: '14px',
 };
 

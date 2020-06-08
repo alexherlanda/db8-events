@@ -1,7 +1,7 @@
 import React from 'react';
 import { mainContainer, countryIconContainer, countryTextContainer } from './styles';
-import PropTypes from 'prop-types';
 import CountryIcon from '../atomic/CountrieIcon';
+import PropTypes from 'prop-types';
 
 function CountryBadge(props) {
   const { countryLabel, countryCode } = props;
@@ -9,7 +9,7 @@ function CountryBadge(props) {
   return (
     <div style={mainContainer}>
       <div style={countryIconContainer}>
-        <CountryIcon countryCode={countryCode} />
+        <CountryIcon countryCode={countryCode} style={{ fontSize: '300px' }} />
       </div>
       <div style={countryTextContainer}>{countryLabel}</div>
     </div>

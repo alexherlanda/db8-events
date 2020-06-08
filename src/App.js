@@ -88,12 +88,22 @@ function App(props) {
                         </Row>
 
                         <Row>
-                          <Col span={5}>
-                            <CountryBadge countryLabel={event.country} />
+                          <Col xs={7} sm={7} md={6} lg={6} xl={6} xxl={4}>
+                            <CountryBadge
+                              countryLabel={event.country}
+                              countryCode={event.countryCode}
+                            />
                           </Col>
-                          <Col span={24}>{event.host}</Col>
-                          <Col span={24}>{event.reunionSpot}</Col>
+
+                          <Col style={{ marginTop: 5 }} span={24}>
+                            {event.host}
+                          </Col>
+
+                          <Col style={{ marginTop: 5 }} span={24}>
+                            {event.reunionSpot}
+                          </Col>
                         </Row>
+
                         <Row style={{ display: 'flex', justifyContent: 'center' }}>
                           <Col
                             style={{
@@ -152,6 +162,7 @@ function App(props) {
                           </Col>
                         </Row>
                         <Row
+                          gutter={[8, 8]}
                           style={{
                             marginTop: '22px',
                             display: 'flex',
@@ -159,13 +170,16 @@ function App(props) {
                             alignItems: 'center',
                           }}
                         >
-                          <Col span={6}>
-                            <Button
-                              block
-                              type="primary"
-                              style={{ borderRadius: '12px' }}
-                            >
-                              Book
+                          <Col xs={12} sm={12} md={12} lg={10} xl={8} xxl={8}>
+                            <a href={event.infoLink}>
+                              <Button block style={{ borderRadius: '12px' }}>
+                                Saber más
+                              </Button>
+                            </a>
+                          </Col>
+                          <Col xs={12} sm={12} md={12} lg={10} xl={8} xxl={8}>
+                            <Button block style={{ borderRadius: '12px' }}>
+                              Registrarse
                             </Button>
                           </Col>
                         </Row>
