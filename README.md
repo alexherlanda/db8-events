@@ -16,22 +16,24 @@ DB8 Calendar is a calendar system for British Parliamentary and WSDC style debat
 
 EN: There are many ways in wich you can contribute to having
 
-ES: Hay muchas maneras en que se puede contribuir a DB8 a tener una base da datos gratuita y libre para la comunidad de debate que organize y presente todos los eventos de la comunidad para el uso de todos. Puedes participar:
+ES: Hay muchas maneras en que se puede contribuir a DB8 a tener una base da datos gratuita y libre para la comunidad de debate que organize y presente todos los eventos de la comunidad para el uso de todos. Esta es una lista de cosas en las que puedes ayudar al proyecto
 
-- Mejorando y mateniendo código fuente.
-- Mejorando y mateniendo la documentación
 - Mejorando y la base de datos (validando y subiendo eventos)
+- Mejorando y mateniendo la documentación
 - Donando para el mantenimiento del proyecto
 - Generando covers (images) para los eventos
+- Gestionando nuevas funcionalidades
+- Probando nuevas funcionalidades
+- Mejorando y mateniendo código fuente.
 
 ### TO DO:
 
 - Create backend service to handle events and users
 - Create a registration for for events
 
-## Shotouts
+## shout Out
 
-This app is created is also possible beacuase the awesome teams of
+This app is also possible beacuase the awesome teams of:
 
 - react
 - create-react-app
