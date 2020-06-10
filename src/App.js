@@ -1,10 +1,9 @@
 import React from 'react';
-import { Layout, List, Card, Typography, Row, Col, Button } from 'antd';
+import { Layout, List, Card, Row, Col } from 'antd';
 import './App.css';
 import { events } from './models/events';
 import EventCard from './components/molecular/EventCard';
 function App(props) {
-  const { Title } = Typography;
   const { Header, Content } = Layout;
 
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Row, Col, List, Typography, Button } from 'antd';
+import { Card, Row, Col, Typography, Button } from 'antd';
 import CountryBadge from '../../atomic/CountryBadge';
 import Tags from '../../atomic/Tags';
 import DateRange from '../../atomic/DateRange';
@@ -70,18 +70,24 @@ function EventCard(props) {
               }}
             >
               <Col xs={12} sm={12} md={12} lg={10} xl={8} xxl={8}>
-                <a href={event.infoLink}>
-                  <Button block style={{ borderRadius: '12px' }}>
-                    Saber más
-                  </Button>
-                </a>
+                <Button
+                  block
+                  href={event.registerLink}
+                  target="_blank"
+                  style={{ borderRadius: '12px' }}
+                >
+                  Saber más
+                </Button>
               </Col>
               <Col xs={12} sm={12} md={12} lg={10} xl={8} xxl={8}>
-                <a href={event.registerLink}>
-                  <Button block style={{ borderRadius: '12px' }}>
-                    Registrarse
-                  </Button>
-                </a>
+                <Button
+                  block
+                  href={event.registerLink}
+                  target="_blank"
+                  style={{ borderRadius: '12px' }}
+                >
+                  Registrarse
+                </Button>
               </Col>
             </Row>
           </Card>
