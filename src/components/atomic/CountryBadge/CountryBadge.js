@@ -1,6 +1,6 @@
 import React from 'react';
 import { mainContainer, countryIconContainer, countryTextContainer } from './styles';
-import CountryIcon from '../atomic/CountrieIcon';
+import CountryIcon from '../CountrieIcon';
 import PropTypes from 'prop-types';
 
 function CountryBadge(props) {
