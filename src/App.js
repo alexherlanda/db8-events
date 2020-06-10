@@ -1,10 +1,10 @@
 import React from 'react';
 import { Layout, List, Card, Typography, Row, Col, Button } from 'antd';
 import './App.css';
-import { ArrowRightOutlined } from '@ant-design/icons';
 import { events } from './models/events';
 import CountryBadge from './components/CountryBadge';
-
+import Tags from './components/atomic/Tags';
+import DateRange from './components/atomic/DateRange';
 function App(props) {
   const { Title } = Typography;
   const { Header, Content } = Layout;
@@ -16,9 +16,7 @@ function App(props) {
         <Content style={{ margin: 20 }}>
           <Row>
             <Col span={24}>
-              <Card style={{ borderRadius: '12px', marginBottom: '12px' }}>
-                Barra de tareas aqui
-              </Card>
+              <Card style={{ borderRadius: '12px', marginBottom: '12px' }} />
             </Col>
           </Row>
           <List
@@ -35,40 +33,18 @@ function App(props) {
             renderItem={(event) => (
               <List.Item>
                 <Card
+                  hoverable
                   style={{
                     borderRadius: '15px',
                     minHeight: 400,
-                    backgroundImage: "url('../assets/examples/test.jpeg')",
+                    backgroundImage: event.coverUrl,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
                   }}
                   bodyStyle={{ padding: '10px' }}
                 >
                   <Row gutter={8} style={{ display: 'flex', alignItems: 'bottom' }}>
-                    <Col span={6}>
-                      <div
-                        style={{
-                          display: 'flex',
-                          justifyContent: 'center',
-                          background: 'lightgrey',
-                          borderRadius: '4px',
-                          color: 'white',
-                        }}
-                      >
-                        {event.tags.category}
-                      </div>
-                    </Col>
-                    <Col span={6}>
-                      <div
-                        style={{
-                          display: 'flex',
-                          justifyContent: 'center',
-                          background: 'lightgrey',
-                          borderRadius: '4px',
-                          color: 'white',
-                        }}
-                      >
-                        {event.tags.attendanceType}
-                      </div>
-                    </Col>
+                    <Tags tags={event.tags} />
                   </Row>
                   <Row
                     style={{
@@ -77,7 +53,6 @@ function App(props) {
                   >
                     <Col span={24}>
                       <Card
-                        hoverable
                         style={{
                           borderRadius: '12px',
                           minHeight: 250,
@@ -97,7 +72,7 @@ function App(props) {
                           </Col>
 
                           <Col style={{ marginTop: 5 }} span={24}>
-                            {event.host}
+                            {'By ' + event.convenors}
                           </Col>
 
                           <Col style={{ marginTop: 5 }} span={24}>
@@ -106,61 +81,10 @@ function App(props) {
                         </Row>
 
                         <Row style={{ display: 'flex', justifyContent: 'center' }}>
-                          <Col
-                            style={{
-                              display: 'flex',
-                              justifyContent: 'flex-end',
-                              alignItems: 'center',
-                            }}
-                            span={4}
-                          >
-                            <Title level={4}>25 </Title>
-                          </Col>
-                          <Col
-                            style={{
-                              display: 'flex',
-                              justifyContent: 'center',
-                              alignItems: 'center',
-                            }}
-                            span={4}
-                          >
-                            <>
-                              mayo <br /> 2020
-                            </>
-                          </Col>
-                          <Col
-                            span={2}
-                            style={{
-                              display: 'flex',
-                              justifyContent: 'center',
-                              alignItems: 'center',
-                            }}
-                          >
-                            <ArrowRightOutlined />
-                          </Col>
-
-                          <Col
-                            span={4}
-                            style={{
-                              display: 'flex',
-                              justifyContent: 'flex-end',
-                              alignItems: 'center',
-                            }}
-                          >
-                            <Title level={4}>25 </Title>
-                          </Col>
-                          <Col
-                            span={4}
-                            style={{
-                              display: 'flex',
-                              justifyContent: 'center',
-                              alignItems: 'center',
-                            }}
-                          >
-                            <>
-                              mayo <br /> 2020
-                            </>
-                          </Col>
+                          <DateRange
+                            startDate={event.startDate}
+                            endDate={event.endDate}
+                          />
                         </Row>
                         <Row
                           gutter={[8, 8]}
@@ -179,9 +103,11 @@ function App(props) {
                             </a>
                           </Col>
                           <Col xs={12} sm={12} md={12} lg={10} xl={8} xxl={8}>
-                            <Button block style={{ borderRadius: '12px' }}>
-                              Registrarse
-                            </Button>
+                            <a href={event.registerLink}>
+                              <Button block style={{ borderRadius: '12px' }}>
+                                Registrarse
+                              </Button>
+                            </a>
                           </Col>
                         </Row>
                       </Card>
