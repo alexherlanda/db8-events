@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, List, Card, Row, Col } from 'antd';
 import './App.css';
-import { events } from './models/events';
+import { realEvents } from './models/events';
 import EventCard from './components/molecular/EventCard';
 function App(props) {
   const { Header, Content } = Layout;
@@ -26,10 +26,10 @@ function App(props) {
               xl: 3,
               xxl: 3,
             }}
-            dataSource={events}
+            dataSource={realEvents}
             renderItem={(event) => (
               <List.Item>
-                <EventCard event={event} />{' '}
+                <EventCard event={event} />
               </List.Item>
             )}
           />
