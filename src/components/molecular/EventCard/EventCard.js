@@ -1,8 +1,9 @@
 import React from 'react';
-import { Card, Row, Col, Typography, Button } from 'antd';
+import { Card, Row, Col, Typography, Button, Popover } from 'antd';
 import CountryBadge from '../../atomic/CountryBadge';
 import Tags from '../../atomic/Tags';
 import DateRange from '../../atomic/DateRange';
+import { InfoCircleOutlined } from '@ant-design/icons';
 
 const { Title } = Typography;
 
@@ -37,7 +38,21 @@ function EventCard(props) {
             bodyStyle={{ padding: '10px' }}
           >
             <Row>
-              <Title level={4}>{event.name}</Title>
+              <Col span={24}>
+                <Popover
+                  title={event.name}
+                  content={event.description}
+                  placement="top"
+                  trigger={'click'}
+                >
+                  <div style={{ display: 'flex', alignItems: 'baseline' }}>
+                    <Title level={4} style={{ marginRight: '5px' }}>
+                      {event.shortName}
+                    </Title>
+                    <InfoCircleOutlined />
+                  </div>
+                </Popover>
+              </Col>
             </Row>
 
             <Row>
