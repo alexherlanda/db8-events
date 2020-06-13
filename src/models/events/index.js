@@ -75,6 +75,45 @@ export const events = [
 
 export const realEvents = [
   {
+    convenors: 'AMD',
+    country: 'MX',
+    countryCode: 'MX',
+    coverUrl:
+      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
+    description: '--',
+    startDate: '2020-06-20',
+    endDate: '2020-06-21',
+    infoLink: 'https://www.facebook.com/AMxDebate',
+    name: 'Mx Debate Virtual 2020',
+    shortName: 'Mx Debate Virtual',
+    registerLink:
+      'https://docs.google.com/forms/d/e/1FAIpQLSe99-gShMnXPg7uHGKVs8ECSXCzqKrJqmvi5J5wPrbcMHihiA/viewform',
+    reunionSpot: 'Discord',
+    tags: [
+      { key: 'type', text: 'Torneo' },
+      { key: 'attendanceType', text: 'Virtual' },
+    ],
+  },
+  {
+    convenors: 'ITESM Toluca',
+    country: 'MX',
+    countryCode: 'MX',
+    coverUrl:
+      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
+    description: '--',
+    startDate: '2020-06-20',
+    endDate: '2020-06-21',
+    infoLink: 'https://www.facebook.com/Torneo-Solidaridad-113668357027983',
+    name: 'Torneo Solidaridad',
+    shortName: 'Torneo Solidaridad',
+    registerLink: 'https://linktr.ee/solidaridaddebate',
+    reunionSpot: '-',
+    tags: [
+      { key: 'type', text: 'Torneo' },
+      { key: 'attendanceType', text: 'Virtual' },
+    ],
+  },
+  {
     convenors: 'D-UCV',
     country: 'VE',
     countryCode: 'VE',
@@ -127,45 +166,6 @@ export const realEvents = [
     name: 'Torneo Internacional de Debate Digital Argumentum',
     registerLink: 'https://www.facebook.com/ArgumentumDigital/',
     reunionSpot: '-',
-    tags: [
-      { key: 'type', text: 'Torneo' },
-      { key: 'attendanceType', text: 'Virtual' },
-    ],
-  },
-  {
-    convenors: 'ITESM Toluca',
-    country: 'MX',
-    countryCode: 'MX',
-    coverUrl:
-      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
-    description: '--',
-    startDate: '2020-06-20',
-    endDate: '2020-06-21',
-    infoLink: 'https://www.facebook.com/Torneo-Solidaridad-113668357027983',
-    name: 'Torneo Solidaridad',
-    shortName: 'Torneo Solidaridad',
-    registerLink: 'https://linktr.ee/solidaridaddebate',
-    reunionSpot: '-',
-    tags: [
-      { key: 'type', text: 'Torneo' },
-      { key: 'attendanceType', text: 'Virtual' },
-    ],
-  },
-  {
-    convenors: 'AMD',
-    country: 'MX',
-    countryCode: 'MX',
-    coverUrl:
-      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
-    description: '--',
-    startDate: '2020-06-20',
-    endDate: '2020-06-21',
-    infoLink: 'https://www.facebook.com/AMxDebate',
-    name: 'Mx Debate Virtual 2020',
-    shortName: 'Mx Debate Virtual',
-    registerLink:
-      'https://docs.google.com/forms/d/e/1FAIpQLSe99-gShMnXPg7uHGKVs8ECSXCzqKrJqmvi5J5wPrbcMHihiA/viewform',
-    reunionSpot: 'Discord',
     tags: [
       { key: 'type', text: 'Torneo' },
       { key: 'attendanceType', text: 'Virtual' },
