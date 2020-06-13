@@ -11,6 +11,7 @@ import { ReactComponent as USa } from '../../../assets/countries/us.svg';
 import { ReactComponent as ECa } from '../../../assets/countries/ec.svg';
 import { ReactComponent as CLa } from '../../../assets/countries/cl.svg';
 import { ReactComponent as PAa } from '../../../assets/countries/pa.svg';
+import { ReactComponent as VEa } from '../../../assets/countries/ve.svg';
 //End converting SVG into React components
 
 function CountryIcon(props) {
@@ -26,6 +27,8 @@ function CountryIcon(props) {
   const EC = (props) => <Icon component={ECa} {...props} />; //Ecuador
   const CL = (props) => <Icon component={CLa} {...props} />; //Chile
   const PA = (props) => <Icon component={PAa} {...props} />; //Chile
+  const VE = (props) => <Icon component={VEa} {...props} />; //Venezuela
+
   //End  of converting icons into antdIcons
 
   let CIcon;
@@ -60,6 +63,10 @@ function CountryIcon(props) {
 
     case 'PA':
       CIcon = <PA />;
+      break;
+
+    case 'VE':
+      CIcon = <VE />;
       break;
 
     default:
