@@ -152,7 +152,7 @@ export const realEvents = [
     ],
   },
   {
-    convenors: 'Asociación Mexicana de Debate',
+    convenors: 'AMD',
     country: 'MX',
     countryCode: 'MX',
     coverUrl:
@@ -162,7 +162,7 @@ export const realEvents = [
     endDate: '2020-06-21',
     infoLink: 'https://www.facebook.com/AMxDebate',
     name: 'Mx Debate Virtual 2020',
-    shortName: 'Mx Debate Virtual 2020',
+    shortName: 'Mx Debate Virtual',
     registerLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSe99-gShMnXPg7uHGKVs8ECSXCzqKrJqmvi5J5wPrbcMHihiA/viewform',
     reunionSpot: 'Discord',
