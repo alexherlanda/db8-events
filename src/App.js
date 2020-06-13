@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout, List, Card, Row, Col } from 'antd';
 import './App.css';
+import './App.less';
 import { realEvents } from './models/events';
 import EventCard from './components/molecular/EventCard';
 function App(props) {
