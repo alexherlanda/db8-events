@@ -3,7 +3,7 @@ import { Card, Row, Col, Typography, Button, Popover } from 'antd';
 import CountryBadge from '../../atomic/CountryBadge';
 import Tags from '../../atomic/Tags';
 import DateRange from '../../atomic/DateRange';
-import { InfoOutlined } from '@ant-design/icons';
+import { InfoCircleOutlined } from '@ant-design/icons';
 
 const { Title } = Typography;
 
@@ -21,7 +21,14 @@ function EventCard(props) {
       }}
       bodyStyle={{ padding: '10px' }}
     >
-      <Row gutter={8} style={{ display: 'flex', alignItems: 'bottom' }}>
+      <Row
+        gutter={8}
+        style={{
+          display: 'flex',
+          alignItems: 'bottom',
+          //paddingLeft: '10px',
+        }}
+      >
         <Tags tags={event.tags} />
       </Row>
       <Row
@@ -56,7 +63,7 @@ function EventCard(props) {
                     >
                       {event.shortName}
                     </Title>
-                    <InfoOutlined />
+                    <InfoCircleOutlined />
                   </div>
                 </Popover>
               </Col>
@@ -94,7 +101,7 @@ function EventCard(props) {
               <Col xs={12} sm={12} md={12} lg={10} xl={8} xxl={8}>
                 <Button
                   block
-                  href={event.registerLink}
+                  href={event.infoLink}
                   target="_blank"
                   style={{ borderRadius: '12px' }}
                 >

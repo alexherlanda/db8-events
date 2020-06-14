@@ -1,8 +1,9 @@
 import React from 'react';
-import { Layout, List, Card, Row, Col, Typography } from 'antd';
+import { Layout, List, Card, Row, Col } from 'antd';
 import './App.less';
 import { realEvents } from './models/events';
 import EventCard from './components/molecular/EventCard';
+
 function App(props) {
   const { Header, Content } = Layout;
 
@@ -45,13 +46,13 @@ function App(props) {
           </Row>
           <List
             grid={{
-              gutter: 8,
+              gutter: 16,
               xs: 1,
               sm: 2,
               md: 2,
               lg: 3,
               xl: 3,
-              xxl: 3,
+              xxl: 4,
             }}
             dataSource={realEvents}
             renderItem={(event) => (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Typography } from 'antd';
+import { Col } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import moment from 'moment';
 import 'moment/locale/es';
@@ -14,20 +14,20 @@ function DateRange(props) {
     return formatedString;
   };
 
-  const { Title } = Typography;
-
   //TODO: Separate styles in another file
   return (
     <>
       <Col
         style={{
           display: 'flex',
-          justifyContent: 'flex-end',
+          justifyContent: 'center',
           alignItems: 'center',
+          fontWeight: 'bold',
+          fontSize: '17px',
         }}
         span={4}
       >
-        <Title level={4}> {formatDate(startDate, 'DD')} </Title>
+        {formatDate(startDate, 'DD')}
       </Col>
       <Col
         style={{
@@ -56,11 +56,13 @@ function DateRange(props) {
         span={4}
         style={{
           display: 'flex',
-          justifyContent: 'flex-end',
+          justifyContent: 'center',
           alignItems: 'center',
+          fontWeight: 'bold',
+          fontSize: '17px',
         }}
       >
-        <Title level={4}>{formatDate(endDate, 'DD')} </Title>
+        {formatDate(endDate, 'DD')}
       </Col>
       <Col
         span={4}
