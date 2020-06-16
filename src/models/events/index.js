@@ -1,86 +1,14 @@
-export const events = [
-  {
-    convenors: 'Debate FESC',
-    country: 'México',
-    countryCode: 'MX',
-    coverUrl:
-      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
-    description: 'El torneo más BP más importante y  antiguo de la UNAM',
-    endDate: '2020-06-11T01:00:40.957Z',
-    infoLink: 'https://www.facebook.com/',
-    name: 'Copa UNAM',
-    registerLink: 'https://www.facebook.com/',
-    reunionSpot: 'Zoom',
-    startDate: '2020-06-10T01:00:40.957Z',
-    tags: [
-      { key: 'type', text: 'Torneo' },
-      { key: 'attendanceType', text: 'Virtual' },
-    ],
-  },
-  {
-    convenors: 'Debate FESC',
-    country: 'México',
-    countryCode: 'MX',
-    coverUrl:
-      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
-    description: 'El torneo más BP más importante y  antiguo de la UNAM',
-    endDate: '2020-06-11T01:00:40.957Z',
-    infoLink: 'https://www.facebook.com/',
-    name: 'Copa UNAM',
-    registerLink: 'https://www.facebook.com/',
-    reunionSpot: 'Zoom',
-    startDate: '2020-06-10T01:00:40.957Z',
-    tags: [
-      { key: 'type', text: 'Torneo' },
-      { key: 'attendanceType', text: 'Virtual' },
-    ],
-  },
-  {
-    convenors: 'Debate FESC',
-    country: 'México',
-    countryCode: 'MX',
-    coverUrl:
-      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
-    description: 'El torneo más BP más importante y  antiguo de la UNAM',
-    endDate: '2020-06-11T01:00:40.957Z',
-    infoLink: 'https://www.facebook.com/',
-    name: 'Copa UNAM',
-    registerLink: 'https://www.facebook.com/',
-    reunionSpot: 'Zoom',
-    startDate: '2020-06-10T01:00:40.957Z',
-    tags: [
-      { key: 'type', text: 'Torneo' },
-      { key: 'attendanceType', text: 'Virtual' },
-    ],
-  },
-  {
-    convenors: 'Debate FESC',
-    country: 'México',
-    countryCode: 'MX',
-    coverUrl:
-      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
-    description: 'El torneo más BP más importante y  antiguo de la UNAM',
-    endDate: '2020-06-11T01:00:40.957Z',
-    infoLink: 'https://www.facebook.com/',
-    name: 'Copa UNAM',
-    registerLink: 'https://www.facebook.com/',
-    reunionSpot: 'Zoom',
-    startDate: '2020-06-10T01:00:40.957Z',
-    tags: [
-      { key: 'type', text: 'Torneo' },
-      { key: 'attendanceType', text: 'Virtual' },
-    ],
-  },
-];
-
 export const realEvents = [
   {
-    convenors: 'ITESM Toluca',
+    convenorsShortName: 'ITESM Toluca',
+    convenorsCompleteName:
+      'Sociedad de Debate del Tecnológico de Monterrey en Toluca',
     country: 'MX',
     countryCode: 'MX',
     coverUrl:
       'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
-    description: '--',
+    description:
+      'El Torneo Solidaridad tiene como objetivo recaudar recursos para donar al Voluntariado del Instituto de Salud del Estado de México',
     startDate: '2020-06-20',
     endDate: '2020-06-21',
     infoLink: 'https://www.facebook.com/Torneo-Solidaridad-113668357027983',
@@ -94,12 +22,14 @@ export const realEvents = [
     ],
   },
   {
-    convenors: 'AMD',
+    convenorsShortName: 'AMD',
+    convenorsCompleteName:
+      'Asociación Mexicana de Debate y el Instituto Nacional Electoral',
     country: 'MX',
     countryCode: 'MX',
     coverUrl:
       'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
-    description: '--',
+    description: 'Torneo virtual para personas entre 18 y 29 años de edad ',
     startDate: '2020-06-25',
     endDate: '2020-06-28',
     infoLink: 'https://www.facebook.com/AMxDebate',
@@ -114,12 +44,13 @@ export const realEvents = [
     ],
   },
   {
-    convenors: 'D-UCV',
+    convenorsShortName: 'D-UCV',
+    convenorsCompleteName: 'Equipo D-UCV',
     country: 'VE',
     countryCode: 'VE',
     coverUrl:
       'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
-    description: '--',
+    description: 'Primer Torneo Virtual de Jueces en Español',
     startDate: '2020-06-26',
     endDate: '2020-06-28',
     infoLink:
@@ -134,12 +65,13 @@ export const realEvents = [
     ],
   },
   {
-    convenors: 'USFQ',
+    convenorsShortName: 'USFQ',
+    convenorsCompleteName: 'USFQ y CMUDE 2020',
     country: 'EC',
     countryCode: 'EC',
     coverUrl:
       'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
-    description: '--',
+    description: 'Toneo Virtual de la organización de CMUDE Ecuador 2020',
     startDate: '2020-07-17',
     endDate: '2020-07-19',
     infoLink: 'https://www.facebook.com/CMUDEcuador/',
@@ -153,12 +85,14 @@ export const realEvents = [
     ],
   },
   {
-    convenors: 'Argumentum',
+    convenorsShortName: 'Argumentum',
+    convenorsCompleteName: 'Argumentum Club de Debate y Oratoria',
     country: 'EC',
     countryCode: 'EC',
     coverUrl:
       'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
-    description: '--',
+    description:
+      'La tercera edición del Torneo Internacional de Debate Digital Argumentum',
     startDate: '2020-08-08',
     endDate: '2020-08-15',
     infoLink: 'https://www.facebook.com/ArgumentumDigital/',

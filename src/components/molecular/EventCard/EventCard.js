@@ -3,7 +3,6 @@ import { Card, Row, Col, Typography, Button, Popover } from 'antd';
 import CountryBadge from '../../atomic/CountryBadge';
 import Tags from '../../atomic/Tags';
 import DateRange from '../../atomic/DateRange';
-import { InfoCircleOutlined } from '@ant-design/icons';
 
 const { Title } = Typography;
 
@@ -48,7 +47,7 @@ function EventCard(props) {
               <Col span={24}>
                 <Popover
                   title={event.name}
-                  content={event.description}
+                  content={`${event.description}. Esta organizado por ${event.convenorsCompleteName}`}
                   placement="top"
                   trigger={'click'}
                 >
@@ -56,14 +55,14 @@ function EventCard(props) {
                     <Title
                       level={4}
                       style={{
-                        marginRight: '5px',
+                        marginRight: '10px',
                         textOverflow: 'clip',
                         maxHeight: '27px',
                       }}
                     >
                       {event.shortName}
                     </Title>
-                    <InfoCircleOutlined />
+                    <div style={{ color: 'grey', fontSize: '11px' }}>...ver más</div>
                   </div>
                 </Popover>
               </Col>
@@ -78,7 +77,7 @@ function EventCard(props) {
               </Col>
 
               <Col style={{ marginTop: 5 }} span={24}>
-                {'By ' + event.convenors}
+                {'By ' + event.convenorsShortName}
               </Col>
 
               <Col style={{ marginTop: 5 }} span={24}>
