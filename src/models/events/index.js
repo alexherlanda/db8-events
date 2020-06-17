@@ -19,6 +19,7 @@ export const realEvents = [
     tags: [
       { key: 'type', text: 'Torneo' },
       { key: 'attendanceType', text: 'Virtual' },
+      { key: 'formatType', text: 'BP' },
     ],
   },
   {
@@ -41,6 +42,7 @@ export const realEvents = [
     tags: [
       { key: 'type', text: 'Torneo' },
       { key: 'attendanceType', text: 'Virtual' },
+      { key: 'formatType', text: 'WSDC' },
     ],
   },
   {
@@ -62,6 +64,7 @@ export const realEvents = [
     tags: [
       { key: 'type', text: 'Torneo' },
       { key: 'attendanceType', text: 'Virtual' },
+      { key: 'formatType', text: 'Otro' },
     ],
   },
   {
@@ -82,6 +85,7 @@ export const realEvents = [
     tags: [
       { key: 'type', text: 'Torneo' },
       { key: 'attendanceType', text: 'Virtual' },
+      { key: 'formatType', text: 'BP' },
     ],
   },
   {
@@ -103,6 +107,7 @@ export const realEvents = [
     tags: [
       { key: 'type', text: 'Torneo' },
       { key: 'attendanceType', text: 'Virtual' },
+      { key: 'formatType', text: 'BP' },
     ],
   },
 ];

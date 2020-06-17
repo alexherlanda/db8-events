@@ -4,7 +4,7 @@ import './App.less';
 import { realEvents } from './models/events';
 import EventCard from './components/molecular/EventCard';
 
-function App(props) {
+function App() {
   const { Header, Content } = Layout;
 
   return (

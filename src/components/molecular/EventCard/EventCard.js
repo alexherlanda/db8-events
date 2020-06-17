@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, Row, Col, Typography, Button, Popover } from 'antd';
+import React, { useState } from 'react';
+import { Card, Row, Col, Typography, Button, Modal } from 'antd';
 import CountryBadge from '../../atomic/CountryBadge';
 import Tags from '../../atomic/Tags';
 import DateRange from '../../atomic/DateRange';
@@ -8,6 +8,8 @@ const { Title } = Typography;
 
 function EventCard(props) {
   const { event } = props;
+  const [showMoreInfo, setShowMoreInfo] = useState(false);
+
   return (
     <Card
       hoverable
@@ -45,26 +47,40 @@ function EventCard(props) {
           >
             <Row>
               <Col span={24}>
-                <Popover
-                  title={event.name}
-                  content={`${event.description}. Esta organizado por ${event.convenorsCompleteName}`}
-                  placement="top"
-                  trigger={'click'}
-                >
-                  <div style={{ display: 'flex', alignItems: 'baseline' }}>
-                    <Title
-                      level={4}
-                      style={{
-                        marginRight: '10px',
-                        textOverflow: 'clip',
-                        maxHeight: '27px',
-                      }}
-                    >
-                      {event.shortName}
-                    </Title>
-                    <div style={{ color: 'grey', fontSize: '11px' }}>...ver más</div>
+                <div style={{ display: 'flex', alignItems: 'baseline' }}>
+                  <Modal
+                    maskStyle={{ background: 'rgba(0, 0, 0, 0.95)' }}
+                    title={event.name}
+                    visible={showMoreInfo}
+                    destroyOnClose
+                    onCancel={() => setShowMoreInfo(false)}
+                    footer={
+                      <Button type="primary" onClick={() => setShowMoreInfo(false)}>
+                        OK
+                      </Button>
+                    }
+                  >
+                    <p>
+                      {`${event.description}. Esta organizado por ${event.convenorsCompleteName}`}
+                    </p>
+                  </Modal>
+                  <Title
+                    level={4}
+                    style={{
+                      marginRight: '10px',
+                      textOverflow: 'clip',
+                      maxHeight: '27px',
+                    }}
+                  >
+                    {event.shortName}
+                  </Title>
+                  <div
+                    style={{ color: 'grey', fontSize: '11px' }}
+                    onClick={() => setShowMoreInfo(true)}
+                  >
+                    ver más
                   </div>
-                </Popover>
+                </div>
               </Col>
             </Row>
 

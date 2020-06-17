@@ -10,7 +10,7 @@ function Tags(props) {
     <>
       {tags.map((tag) => {
         return (
-          <Col span={6} key={tag.key}>
+          <Col span={5} key={tag.key}>
             <div
               style={{
                 display: 'flex',
