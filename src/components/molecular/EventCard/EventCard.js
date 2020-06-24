@@ -70,6 +70,7 @@ function EventCard(props) {
                       marginRight: '10px',
                       textOverflow: 'clip',
                       maxHeight: '27px',
+                      overflowY: 'hidden',
                     }}
                   >
                     {event.shortName}
