@@ -38,7 +38,7 @@ function DateRange(props) {
         span={4}
       >
         <>
-          {formatDate(startDate, 'MMMM')} <br /> {formatDate(startDate, 'YYYY')}
+          {formatDate(startDate, 'MMM')} <br /> {formatDate(startDate, 'YYYY')}
         </>
       </Col>
       <Col
@@ -73,7 +73,7 @@ function DateRange(props) {
         }}
       >
         <>
-          {formatDate(endDate, 'MMMM')} <br /> {formatDate(startDate, 'YYYY')}
+          {formatDate(endDate, 'MMM')} <br /> {formatDate(startDate, 'YYYY')}
         </>
       </Col>
     </>

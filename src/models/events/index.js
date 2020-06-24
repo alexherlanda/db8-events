@@ -1,35 +1,11 @@
 export const realEvents = [
   {
-    convenorsShortName: 'ITESM Toluca',
-    convenorsCompleteName:
-      'Sociedad de Debate del Tecnológico de Monterrey en Toluca',
-    country: 'MX',
-    countryCode: 'MX',
-    coverUrl:
-      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
-    description:
-      'El Torneo Solidaridad tiene como objetivo recaudar recursos para donar al Voluntariado del Instituto de Salud del Estado de México',
-    startDate: '2020-06-20',
-    endDate: '2020-06-21',
-    infoLink: 'https://www.facebook.com/Torneo-Solidaridad-113668357027983',
-    name: 'Torneo Solidaridad',
-    shortName: 'Torneo Solidaridad',
-    registerLink: 'https://linktr.ee/solidaridaddebate',
-    reunionSpot: '-',
-    tags: [
-      { key: 'type', text: 'Torneo' },
-      { key: 'attendanceType', text: 'Virtual' },
-      { key: 'formatType', text: 'BP' },
-    ],
-  },
-  {
     convenorsShortName: 'AMD',
     convenorsCompleteName:
       'Asociación Mexicana de Debate y el Instituto Nacional Electoral',
     country: 'MX',
     countryCode: 'MX',
-    coverUrl:
-      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
+    coverUrl: 'https://live.staticflickr.com/65535/50020912386_8d61f4f8ac_z.jpg',
     description: 'Torneo virtual para personas entre 18 y 29 años de edad ',
     startDate: '2020-06-25',
     endDate: '2020-06-28',
@@ -42,16 +18,16 @@ export const realEvents = [
     tags: [
       { key: 'type', text: 'Torneo' },
       { key: 'attendanceType', text: 'Virtual' },
-      { key: 'formatType', text: 'WSDC' },
+      { key: 'formatType', text: 'BP' },
     ],
   },
+
   {
     convenorsShortName: 'D-UCV',
     convenorsCompleteName: 'Equipo D-UCV',
     country: 'VE',
     countryCode: 'VE',
-    coverUrl:
-      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
+    coverUrl: 'https://live.staticflickr.com/65535/50020077421_1d47b2bd08_b.jpg',
     description: 'Primer Torneo Virtual de Jueces en Español',
     startDate: '2020-06-26',
     endDate: '2020-06-28',
@@ -68,12 +44,33 @@ export const realEvents = [
     ],
   },
   {
+    convenorsShortName: 'Sociedad de Debate USM',
+    convenorsCompleteName:
+      'Sociedad de Debate de la Universidad Técnica Federico Santa María',
+    country: 'CL',
+    countryCode: 'CL',
+    coverUrl: 'https://live.staticflickr.com/65535/50021167112_36526542c9_c.jpg',
+    description:
+      'El TorNaDO es una instancia destinada a potenciar el circuito de debate chileno',
+    startDate: '2020-08-28',
+    endDate: '2020-09-06',
+    infoLink: 'http://www.debatiendo.cl/tornado2020.html',
+    shortName: 'TorNaDO 2020',
+    name: 'Torneo Nacional de Debate 2020',
+    registerLink: 'http://bit.ly/tornado2020',
+    reunionSpot: 'Mixidea',
+    tags: [
+      { key: 'type', text: 'Torneo' },
+      { key: 'attendanceType', text: 'Virtual' },
+      { key: 'formatType', text: 'BP' },
+    ],
+  },
+  {
     convenorsShortName: 'USFQ',
     convenorsCompleteName: 'USFQ y CMUDE 2020',
     country: 'EC',
     countryCode: 'EC',
-    coverUrl:
-      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
+    coverUrl: 'https://live.staticflickr.com/65535/50020911391_502cca8ddf_c.jpg',
     description: 'Toneo Virtual de la organización de CMUDE Ecuador 2020',
     startDate: '2020-07-17',
     endDate: '2020-07-19',
@@ -93,8 +90,7 @@ export const realEvents = [
     convenorsCompleteName: 'Argumentum Club de Debate y Oratoria',
     country: 'EC',
     countryCode: 'EC',
-    coverUrl:
-      'https://user-images.githubusercontent.com/43116659/83987057-913ed980-a904-11ea-8c7e-5899a943478e.png',
+    coverUrl: 'https://live.staticflickr.com/65535/50021167112_36526542c9_c.jpg',
     description:
       'La tercera edición del Torneo Internacional de Debate Digital Argumentum',
     startDate: '2020-08-08',
@@ -108,6 +104,28 @@ export const realEvents = [
       { key: 'type', text: 'Torneo' },
       { key: 'attendanceType', text: 'Virtual' },
       { key: 'formatType', text: 'BP' },
+    ],
+  },
+
+  {
+    convenorsShortName: 'Debate ESAN',
+    convenorsCompleteName: 'Universidad ESAN y Debate ESAN',
+    country: 'PE',
+    countryCode: 'PE',
+    coverUrl: 'https://live.staticflickr.com/65535/50021167112_36526542c9_c.jpg',
+    description:
+      'El campeonato escolar más grande e importante del Perú, en formato WSDC,abre sus puertas, en su IV edición, a todos los colegios de América Latina y Centroamérica. Talleres previos y muchas sorpresas mas.',
+    startDate: '2020-09-19',
+    endDate: '2020-09-20',
+    infoLink: 'https://www.facebook.com/DebateEsan/',
+    shortName: 'Campeonato Escolar',
+    name: 'Campeonato Escolar Debate ESAN',
+    registerLink: 'https://www.facebook.com/DebateEsan/',
+    reunionSpot: 'Discord',
+    tags: [
+      { key: 'type', text: 'Torneo' },
+      { key: 'attendanceType', text: 'Virtual' },
+      { key: 'formatType', text: 'WSDC' },
     ],
   },
 ];
