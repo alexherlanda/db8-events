@@ -43,28 +43,7 @@ export const realEvents = [
       { key: 'formatType', text: 'Otro' },
     ],
   },
-  {
-    convenorsShortName: 'Sociedad de Debate USM',
-    convenorsCompleteName:
-      'Sociedad de Debate de la Universidad Técnica Federico Santa María',
-    country: 'CL',
-    countryCode: 'CL',
-    coverUrl: 'https://live.staticflickr.com/65535/50042552507_3a6443c3fc_h.jpg',
-    description:
-      'El TorNaDO es una instancia destinada a potenciar el circuito de debate chileno',
-    startDate: '2020-08-28',
-    endDate: '2020-09-06',
-    infoLink: 'http://www.debatiendo.cl/tornado2020.html',
-    shortName: 'TorNaDO 2020',
-    name: 'Torneo Nacional de Debate 2020',
-    registerLink: 'http://bit.ly/tornado2020',
-    reunionSpot: 'Mixidea',
-    tags: [
-      { key: 'type', text: 'Torneo' },
-      { key: 'attendanceType', text: 'Virtual' },
-      { key: 'formatType', text: 'BP' },
-    ],
-  },
+
   {
     convenorsShortName: 'USFQ',
     convenorsCompleteName: 'USFQ y CMUDE 2020',
@@ -85,6 +64,7 @@ export const realEvents = [
       { key: 'formatType', text: 'BP' },
     ],
   },
+
   {
     convenorsShortName: 'Argumentum',
     convenorsCompleteName: 'Argumentum Club de Debate y Oratoria',
@@ -100,6 +80,29 @@ export const realEvents = [
     name: 'Torneo Internacional de Debate Digital Argumentum',
     registerLink: 'https://www.facebook.com/ArgumentumDigital/',
     reunionSpot: '-',
+    tags: [
+      { key: 'type', text: 'Torneo' },
+      { key: 'attendanceType', text: 'Virtual' },
+      { key: 'formatType', text: 'BP' },
+    ],
+  },
+
+  {
+    convenorsShortName: 'Sociedad de Debate USM',
+    convenorsCompleteName:
+      'Sociedad de Debate de la Universidad Técnica Federico Santa María',
+    country: 'CL',
+    countryCode: 'CL',
+    coverUrl: 'https://live.staticflickr.com/65535/50042552507_3a6443c3fc_h.jpg',
+    description:
+      'El TorNaDO es una instancia destinada a potenciar el circuito de debate chileno',
+    startDate: '2020-08-28',
+    endDate: '2020-09-06',
+    infoLink: 'http://www.debatiendo.cl/tornado2020.html',
+    shortName: 'TorNaDO 2020',
+    name: 'Torneo Nacional de Debate 2020',
+    registerLink: 'http://bit.ly/tornado2020',
+    reunionSpot: 'Mixidea',
     tags: [
       { key: 'type', text: 'Torneo' },
       { key: 'attendanceType', text: 'Virtual' },
