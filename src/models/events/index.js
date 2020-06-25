@@ -49,7 +49,7 @@ export const realEvents = [
       'Sociedad de Debate de la Universidad Técnica Federico Santa María',
     country: 'CL',
     countryCode: 'CL',
-    coverUrl: 'https://live.staticflickr.com/65535/50021167112_36526542c9_c.jpg',
+    coverUrl: 'https://live.staticflickr.com/65535/50042552507_3a6443c3fc_h.jpg',
     description:
       'El TorNaDO es una instancia destinada a potenciar el circuito de debate chileno',
     startDate: '2020-08-28',
@@ -112,7 +112,7 @@ export const realEvents = [
     convenorsCompleteName: 'Universidad ESAN y Debate ESAN',
     country: 'PE',
     countryCode: 'PE',
-    coverUrl: 'https://live.staticflickr.com/65535/50021167112_36526542c9_c.jpg',
+    coverUrl: 'https://live.staticflickr.com/65535/50042551952_7bd4d42c28_k.jpg',
     description:
       'El campeonato escolar más grande e importante del Perú, en formato WSDC,abre sus puertas, en su IV edición, a todos los colegios de América Latina y Centroamérica. Talleres previos y muchas sorpresas mas.',
     startDate: '2020-09-19',
