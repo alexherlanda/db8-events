@@ -66,19 +66,19 @@ export const realEvents = [
   },
 
   {
-    convenorsShortName: 'Argumentum',
-    convenorsCompleteName: 'Argumentum Club de Debate y Oratoria',
+    convenorsShortName: 'Argumentum ESPOL',
+    convenorsCompleteName: 'Argumentum ESPOL',
+    description:
+      'Open Internacional que además cuenta con break en categoría ELE y Novatos. Además, se tendrá competencia de másters y de discursos. ',
     country: 'EC',
     countryCode: 'EC',
     coverUrl: 'https://live.staticflickr.com/65535/50021167112_36526542c9_c.jpg',
-    description:
-      'La tercera edición del Torneo Internacional de Debate Digital Argumentum',
     startDate: '2020-08-08',
     endDate: '2020-08-15',
-    infoLink: 'https://www.facebook.com/ArgumentumDigital/',
-    shortName: 'TIDDA Argumentum',
-    name: 'Torneo Internacional de Debate Digital Argumentum',
-    registerLink: 'https://www.facebook.com/ArgumentumDigital/',
+    infoLink: 'https://www.instagram.com/argumentumdigital',
+    shortName: 'TIDDA 3',
+    name: 'Torneo Internacional de Debate Digital Argumentum, tercera edición. ',
+    registerLink: 'https://forms.gle/g3Kd4Ba9apGS6LBr9',
     reunionSpot: '-',
     tags: [
       { key: 'type', text: 'Torneo' },
