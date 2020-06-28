@@ -59,3 +59,4 @@ DB8 is released under GNU GENERAL PUBLIC LICENSE Version 3
 1. Clone the repo
 2. Use 'yarn install'
 3. Use 'yarn run dev' for develepment or 'yarn start' for production
+4. In prod: Server will run on http://localhost:3001 or the PORT variable value. In dev: Client will run on http://localhost:3000 and server on http://localhost:3001
