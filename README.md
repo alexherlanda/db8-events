@@ -52,3 +52,9 @@ DB8 is released under GNU GENERAL PUBLIC LICENSE Version 3
 - Itzel Gaona
 - Mariana Ruiz
 - Alexis Herlanda (alexherlanda)
+
+### How to use
+
+1. Clone the repo
+2. Use yarn add
+3. Use yarn start
