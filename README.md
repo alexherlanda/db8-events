@@ -56,5 +56,5 @@ DB8 is released under GNU GENERAL PUBLIC LICENSE Version 3
 ### How to use
 
 1. Clone the repo
-2. Use yarn add
+2. Use yarn install
 3. Use yarn start
