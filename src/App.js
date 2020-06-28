@@ -1,15 +1,30 @@
 import React from 'react';
-import { Layout, List, Card, Row, Col } from 'antd';
+import { Layout, List, Card, Row, Col, Button } from 'antd';
 import './App.less';
 import { realEvents } from './models/events';
 import EventCard from './components/molecular/EventCard';
+import { PlusOutlined } from '@ant-design/icons';
 
 function App() {
   const { Header, Content } = Layout;
 
   return (
     <Layout>
-      <Header />
+      <Header style={{ padding: '0 22px' }}>
+        <Row justify="end">
+          <Col>
+            <Button
+              href="https://forms.gle/vaknivGTW56PQ7Nx7"
+              size="large"
+              type="primary"
+              icon={<PlusOutlined />}
+              target="_blank"
+            >
+              Nuevo
+            </Button>
+          </Col>
+        </Row>
+      </Header>
       <Layout>
         <Content style={{ margin: 20 }}>
           <Row>
