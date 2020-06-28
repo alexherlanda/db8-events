@@ -1,42 +1,45 @@
 {
   "name": "db8-events",
   "version": "0.1.0",
+  "workspaces": ["client"],
   "private": true,
+  "scripts": { 
+    "start": "npm-run-all client:prod prod", 
+    "build": "npm-run-all clean transpile",
+    "dev": "run-p watch:dev client:dev", 
+    "server": "node ./dist-server/bin/www", 
+    "server:dev": "NODE_ENV=development npm-run-all build server client:dev", 
+    "prod": "NODE_ENV=production npm-run-all build server client:prod", 
+    "transpile": "babel ./server --out-dir dist-server", 
+    "clean": "rimraf dist-server", 
+    "watch:dev": "nodemon", 
+    "test": "jest",
+    "client:dev": "yarn workspace client start",
+    "client:prod": "yarn workspace client build" 
+  },
   "dependencies": {
-    "@craco/craco": "^5.6.4",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "antd": "^4.2.5",
-    "axios": "^0.19.2",
-    "craco-less": "^1.17.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-ga": "^3.0.0",
-    "react-redux": "^7.2.0",
-    "react-scripts": "3.4.1",
-    "redux": "^4.0.5",
-    "redux-saga": "^1.1.3"
+    "@babel/cli": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
   },
-  "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject"
+  "nodemonConfig": {
+    "exec": "npm run server:dev",
+    "watch": [ "server/*", "public/*" ],
+    "ignore": [ "**/__tests__/**", "*.test.js", "*.spec.js" ] 
+  }, 
+  "babel": { 
+    "presets": [ "@babel/preset-env" ]
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "jest": {
+    "testEnvironment": "node"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "jest": "24.9.0"
   }
 }

@@ -35,6 +35,7 @@ ES: Hay muchas maneras en que se puede contribuir a DB8 a tener una base da dato
 
 This app is also possible beacuase the awesome teams of:
 
+- express
 - react
 - create-react-app
 - antd
@@ -56,5 +57,5 @@ DB8 is released under GNU GENERAL PUBLIC LICENSE Version 3
 ### How to use
 
 1. Clone the repo
-2. Use yarn add
-3. Use yarn start
+2. Use 'yarn install'
+3. Use 'yarn run dev' for develepment or 'yarn start' for production
