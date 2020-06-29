@@ -21,3 +21,9 @@ dist-server
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# secrets
+
+server/config/dev.config.js
+server/config/prod.config.js
+server/config/test.config.js
