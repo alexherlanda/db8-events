@@ -3,13 +3,12 @@ import path from 'path'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
 import apiRouter from './routes/api'
-import { connect } from './database'
+import { connectDB } from './database'
 
 const app = express()
 
 // DB Connection
-connect()
-  .then(() => console.log('Database is connected'))
+connectDB()
 
 // Middlewares
 app.use(logger('dev'))
