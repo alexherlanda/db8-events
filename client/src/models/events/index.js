@@ -34,7 +34,7 @@ export const realEvents = [
     infoLink: 'https://web.facebook.com/events/559516174713615/',
     name: 'Las Previas del ToNo 2da Edición',
     shortName: 'Pre ToNo 2',
-    registerLink: 'https://forms.gle/9oEtBihwmqwNY7uh8 ',
+    registerLink: 'https://forms.gle/9oEtBihwmqwNY7uh8',
     reunionSpot: 'Discord',
     tags: [
       { key: 'type', text: 'Torneo' },
@@ -85,6 +85,28 @@ export const realEvents = [
     ],
   },
   {
+    convenorsShortName: 'YosTABaruch',
+    convenorsCompleteName: 'YosTAB Y TABaruch',
+    country: 'MX',
+    countryCode: 'MX',
+    coverUrl: 'https://live.staticflickr.com/65535/50080578791_d02613fe46_b.jpg',
+    description:
+      'En vista de los recientes sucesos del COVID y con el aumento de torneos en línea, YosTAB y el buen TABaruch, ofrecen de la manera más amorosa posible el taller "¿Cómo Tabular? aprendiendo a ser TabMaster +AdjCore pro en TabbyCat by YosTABaruch. Tener cuenta en Heroku es  un requisito"',
+    startDate: '2020-07-17',
+    endDate: '2020-07-17',
+    infoLink: 'https://chat.whatsapp.com/Kx7IOfn5SV03jXn5BCA0C3',
+    name:
+      '¿Cómo Tabular? aprendiendo a ser TabMaster +AdjCore pro en TabbyCat by YosTABaruch',
+    shortName: '¿Cómo Tabular?',
+    registerLink: 'https://chat.whatsapp.com/Kx7IOfn5SV03jXn5BCA0C3',
+    reunionSpot: '-',
+    tags: [
+      { key: 'type', text: 'Taller' },
+      { key: 'attendanceType', text: 'Virtual' },
+      { key: 'formatType', text: 'BP' },
+    ],
+  },
+  {
     convenorsShortName: 'Argumentum ESPOL',
     convenorsCompleteName: 'Argumentum ESPOL',
     description:
@@ -104,6 +126,27 @@ export const realEvents = [
       { key: 'attendanceType', text: 'Virtual' },
       { key: 'formatType', text: 'BP' },
     ],
+  },
+
+  {
+    convenorsShortName: 'Copa Disidente',
+    convenorsCompleteName: 'Copa Disidente',
+    country: '-',
+    countryCode: '-',
+    coverUrl: 'https://live.staticflickr.com/65535/50080825612_c8edd4a260_z.jpg',
+    description: 'Torneo separatista para disidencias de género y sexuales',
+    startDate: '2020-08-21',
+    endDate: '2020-08-23',
+    infoLink: false,
+    shortName: 'Copa Disidente',
+    name: 'Copa Disidente',
+    registerLink: false,
+    reunionSpot: '-',
+    tags: [
+      { key: 'type', text: 'Torneo' },
+      { key: 'attendanceType', text: 'Virtual' },
+    ],
+    status: 2,
   },
 
   {
