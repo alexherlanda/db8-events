@@ -27,3 +27,7 @@ yarn-error.log*
 server/config/dev.config.js
 server/config/prod.config.js
 server/config/test.config.js
+
+# firebase cache
+
+**/.firebase
