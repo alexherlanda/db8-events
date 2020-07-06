@@ -1,9 +1,11 @@
 import EventModel from '../models/Event'
+import QueryHandler from '../handlers/QueryHandler'
 
 export const readAllEvents = async (req, res) => {
   try {
     const events = await EventModel.find()
-    res.json(events)
+    const query = new QueryHandler(req.query, events)
+    res.json(query.events)
   } catch (e) {
     console.error(e)
     res.status(500).json({
