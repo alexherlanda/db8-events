@@ -17,6 +17,6 @@ const eventSchema = new Schema({
   tags: [{ key: String, text: String }]
 })
 
-const eventModel = model('event', eventSchema)
+const EventModel = model('Event', eventSchema)
 
-export default eventModel
+export default EventModel

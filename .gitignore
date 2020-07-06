@@ -11,6 +11,11 @@
 client/build
 dist-server
 
+# secrets
+**/dev.config.js
+**/prod.config.js
+**/test.config.js
+
 # misc
 .DS_Store
 .env.local
@@ -21,12 +26,6 @@ dist-server
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# secrets
-
-server/config/dev.config.js
-server/config/prod.config.js
-server/config/test.config.js
 
 # firebase cache
 
