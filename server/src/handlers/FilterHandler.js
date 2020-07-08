@@ -1,4 +1,4 @@
-class QueryHandler {
+class FilterHandler {
   constructor (queries, events) {
     this.queries = queries
     this.events = this.filter(events)
@@ -47,4 +47,4 @@ class QueryHandler {
   }
 }
 
-export default QueryHandler
+export default FilterHandler

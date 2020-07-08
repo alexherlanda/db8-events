@@ -1,12 +1,22 @@
 import EventModel from '../models/Event'
-import QueryHandler from '../handlers/QueryHandler'
+import FilterHandler from '../handlers/FilterHandler'
+import SearchHandler from '../handlers/SearchHandler'
 
 export const readAllEvents = async (req, res) => {
   try {
-    const events = await EventModel.find()
-    const query = new QueryHandler(req.query, events)
-    res.json(query.events)
+    // Get all events
+    const allEvents = await EventModel.find()
+
+    // Filter events
+    const { events, query } = new FilterHandler(req.query, allEvents)
+
+    // Return only search results
+    const results = new SearchHandler(req.query.search, events)
+
+    // Response to client
+    res.json({ query, results })
   } catch (e) {
+    // Handling errors
     console.error(e)
     res.status(500).json({
       error: e
