@@ -3,10 +3,11 @@ import path from 'path'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
 import apiRouter from './routes/api'
+import userRouter from './routes/authentication'
 import { connectDB } from './database'
 import passport from 'passport'
 import LocalStrategy from 'passport-local'
-import User from "./models/User"
+import UserModel from "./models/User"
 
 
 const app = express()
@@ -29,8 +30,8 @@ app.use(require("express-session")({
 app.use(passport.initialize())
 app.use(passport.session())
 passport.use(new LocalStrategy(User.authenticate()))
-passport.serializeUser(User.serializeUser())
-passport.deserializeUser(User.deserializeUser())
+passport.serializeUser(UserModel.serializeUser())
+passport.deserializeUser(UserModel.deserializeUser())
 
 
 // Static files
@@ -39,6 +40,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 // Api Router
 app.use('/api', apiRouter)
+app.use('/',userRouter)
 
 // Production Mode
 if (process.env.NODE_ENV === 'production') {
