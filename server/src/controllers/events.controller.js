@@ -8,13 +8,13 @@ export const readAllEvents = async (req, res) => {
     const allEvents = await EventModel.find()
 
     // Filter events
-    const { events, query } = new FilterHandler(req.query, allEvents)
+    const { events, queries } = new FilterHandler(req.query, allEvents)
 
     // Return only search results
     const results = new SearchHandler(req.query.search, events)
 
     // Response to client
-    res.json({ query, results })
+    res.json({ queries, results })
   } catch (e) {
     // Handling errors
     console.error(e)

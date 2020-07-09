@@ -1,24 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-
+import React from 'react'
 import { Layout, List, Card, Row, Col, Button } from 'antd'
-import EventCard from './components/molecular/EventCard'
 import { PlusOutlined } from '@ant-design/icons'
 
 import './App.less'
 
+import { useQuery } from './hooks/useQuery'
+
+import SearchBar from './components/molecular/SearchBar'
+import EventCard from './components/molecular/EventCard'
+
 function App () {
   const { Header, Content } = Layout
-  const [events, setEvents] = useState([])
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const { data } = await axios.get('/api/events')
-      console.log(data)
-      setEvents([...data])
-    }
-    fetchData()
-  }, [])
+  const [handlers, events, isLoading] = useQuery([])
 
   return (
     <Layout>
@@ -71,6 +64,7 @@ function App () {
               </Card>
             </Col>
           </Row>
+          <SearchBar handlers={handlers} />
           <List
             grid={{
               gutter: 16,
@@ -81,6 +75,7 @@ function App () {
               xl: 3,
               xxl: 4
             }}
+            loading={isLoading}
             dataSource={events}
             renderItem={(event) => (
               <List.Item>

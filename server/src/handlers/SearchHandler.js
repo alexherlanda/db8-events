@@ -5,7 +5,6 @@ class SearchHandler {
     this.search = search || ''
     this.list = list
     this.options = {
-      includeScore: true,
       keys: ['convenorsShortName', 'convenorsCompleteName', 'name', 'shortName'],
       threshold: 0.4
     }
@@ -16,7 +15,7 @@ class SearchHandler {
     if (this.search.length > 0) {
       const fuse = new Fuse(this.list, this.options)
       const results = fuse.search(this.search)
-      return results
+      return results.map(({ item }) => item)
     } else {
       return this.list
     }

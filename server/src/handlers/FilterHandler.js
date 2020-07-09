@@ -26,8 +26,10 @@ class FilterHandler {
     return countries.split(',').includes(event.country)
   }
 
-  monthFilter (event, months) {
-    return months.split(',').includes((event.endDate.getMonth() + 1).toString()) || months.split(',').includes((event.startDate.getMonth() + 1).toString())
+  monthFilter (event, dates) {
+    const [date1, date2] = dates.split(',').map(date => new Date(date))
+    const { startDate, endDate } = event
+    return startDate <= date2 && endDate >= date1
   }
 
   typeFilter (event, types) {
