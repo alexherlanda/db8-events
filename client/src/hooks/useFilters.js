@@ -80,7 +80,7 @@ export const useFilters = () => {
   }
 
   const reset = () => {
-    [setCountries, setMonths, setTypes, setAttendanceTypes, setFormat].forEach(handler => handler([]))
+    [setCountries, setMonths, setTypes, setAttendanceTypes, setMonthsString, setFormat].forEach(handler => handler([]))
   }
 
   useEffect(
