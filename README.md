@@ -62,10 +62,11 @@ DB8 is released under GNU GENERAL PUBLIC LICENSE Version 3
 4. In prod: Server will run on http://localhost:3001 or the PORT variable value. In dev: Client will run on http://localhost:3000 and server on http://localhost:3001
 
 ### How to add dependencies
+
 ## For frontend:
+
 1. Use 'yarn workspace client add DEPENDENCY_NAME'
 
 ## For backend:
+
 1. Use 'yarn workspace server add DEPENDENCY_NAME'
-
-
