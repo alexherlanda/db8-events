@@ -1,38 +1,38 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Layout, List, Card, Row, Col, Button } from 'antd';
+import EventCard from './components/molecular/EventCard';
+import { PlusOutlined } from '@ant-design/icons';
+import { useTranslation } from 'react-i18next';
+import './App.less';
 
-import { Layout, List, Card, Row, Col, Button } from 'antd'
-import EventCard from './components/molecular/EventCard'
-import { PlusOutlined } from '@ant-design/icons'
-
-import './App.less'
-
-function App () {
-  const { Header, Content } = Layout
-  const [events, setEvents] = useState([])
+function App() {
+  const { Header, Content } = Layout;
+  const { t } = useTranslation();
+  const [events, setEvents] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get('/api/events')
-      console.log(data)
-      setEvents([...data])
-    }
-    fetchData()
-  }, [])
+      const { data } = await axios.get('/api/events');
+      console.log(data);
+      setEvents([...data]);
+    };
+    fetchData();
+  }, []);
 
   return (
     <Layout>
       <Header style={{ padding: '0 22px' }}>
-        <Row justify='end'>
+        <Row justify="end">
           <Col>
             <Button
-              href='https://forms.gle/vaknivGTW56PQ7Nx7'
-              size='large'
-              type='primary'
+              href="https://forms.gle/vaknivGTW56PQ7Nx7"
+              size="large"
+              type="primary"
               icon={<PlusOutlined />}
-              target='_blank'
+              target="_blank"
             >
-              Nuevo
+              {t('actionBar-add')}
             </Button>
           </Col>
         </Row>
@@ -50,7 +50,7 @@ function App () {
                     display: 'flex',
                     justifyContent: 'center',
                     minHeight: '50px',
-                    alignItems: 'flex-end'
+                    alignItems: 'flex-end',
                   }}
                 >
                   <Col
@@ -62,7 +62,7 @@ function App () {
                       fontWeight: 'bold',
                       borderBottom: '2px solid #1890ff',
                       height: '100%',
-                      padding: '10px'
+                      padding: '10px',
                     }}
                   >
                     Explorar
@@ -79,7 +79,7 @@ function App () {
               md: 2,
               lg: 3,
               xl: 3,
-              xxl: 4
+              xxl: 4,
             }}
             dataSource={events}
             renderItem={(event) => (
@@ -91,11 +91,11 @@ function App () {
         </Content>
       </Layout>
     </Layout>
-  )
+  );
 }
 
-App.prototypes = {}
+App.prototypes = {};
 
-App.defaultProps = {}
+App.defaultProps = {};
 
-export default App
+export default App;

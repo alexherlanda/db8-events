@@ -69,8 +69,12 @@ function CountryIcon(props) {
       CIcon = <VE />;
       break;
 
+    case '-':
+      CIcon = null;
+      break;
+
     default:
-      CIcon = <MX />;
+      CIcon = null;
       break;
   }
 
