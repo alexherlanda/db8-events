@@ -1,5 +1,5 @@
 import UserModel from '../models/User'
-import { use } from 'passport'
+import passport from 'passport'
 
 export const readAllUsers = async (req, res) => {
   try {
@@ -28,7 +28,6 @@ export const readOneUser = async (req, res) => {
 
 export const createUser = async (req, res) => {
   const { body } = req
-  const newEvent = new EventModel(body)
 
   try {
     const user = await UserModel.register(new UserModel({username: body.username}), body.password)
@@ -67,4 +66,11 @@ export const deleteUser = async (req, res) => {
       error: e
     })
   }
+}
+
+export const loginUser = async (req, res)=>{
+  res.json({
+    username: req.user.username,
+    status: "Authorized"
+  })
 }

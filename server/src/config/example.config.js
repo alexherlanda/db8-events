@@ -4,5 +4,9 @@ export const credentials = {
     user: 'DATABASE_USER',
     password: 'DATABASE_PASSWORD',
     db: 'DATABASE_NAME'
+  },
+  flickr: {
+    key: 'FLICKR_KEY',
+    secret: 'FLICKR_SECRET'
   }
 }
