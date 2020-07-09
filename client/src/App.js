@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Layout, List, Card, Row, Col, Button } from 'antd';
-import './App.less';
-import { realEvents } from './models/events';
 import EventCard from './components/molecular/EventCard';
 import { PlusOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
+import './App.less';
+
 function App() {
   const { Header, Content } = Layout;
   const { t } = useTranslation();
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await axios.get('/api/events');
+      console.log(data);
+      setEvents([...data]);
+    };
+    fetchData();
+  }, []);
 
   return (
     <Layout>
@@ -70,7 +81,7 @@ function App() {
               xl: 3,
               xxl: 4,
             }}
-            dataSource={realEvents}
+            dataSource={events}
             renderItem={(event) => (
               <List.Item>
                 <EventCard event={event} />
