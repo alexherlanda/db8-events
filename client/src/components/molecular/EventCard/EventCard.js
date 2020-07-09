@@ -116,6 +116,7 @@ function EventCard(props) {
             >
               <Col xs={12} sm={12} md={12} lg={10} xl={8} xxl={8}>
                 <Button
+                  disabled={event.infoLink ? false : true}
                   block
                   href={event.infoLink}
                   target="_blank"
@@ -126,6 +127,7 @@ function EventCard(props) {
               </Col>
               <Col xs={12} sm={12} md={12} lg={10} xl={8} xxl={8}>
                 <Button
+                  disabled={event.infoLink ? false : true}
                   block
                   href={event.registerLink}
                   target="_blank"
