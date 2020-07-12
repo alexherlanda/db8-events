@@ -5,7 +5,7 @@ import EventCard from './components/molecular/EventCard';
 import { PlusOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import './App.less';
-
+import LanguageSelector from '../src/components/atomic/LanguageSelector';
 function App() {
   const { Header, Content } = Layout;
   const { t } = useTranslation();
@@ -23,7 +23,10 @@ function App() {
   return (
     <Layout>
       <Header style={{ padding: '0 22px' }}>
-        <Row justify="end">
+        <Row justify="end" gutter={[8, 8]}>
+          <Col>
+            <LanguageSelector />
+          </Col>
           <Col>
             <Button
               href="https://forms.gle/vaknivGTW56PQ7Nx7"
