@@ -14,18 +14,18 @@ function App () {
   const { Header, Content } = Layout
   const [handlers, events, isLoading] = useQuery([])
   const { t } = useTranslation()
-  
+
   return (
     <Layout>
       <Header style={{ padding: '0 22px' }}>
-        <Row justify="end">
+        <Row justify='end'>
           <Col>
             <Button
-              href="https://forms.gle/vaknivGTW56PQ7Nx7"
-              size="large"
-              type="primary"
+              href='https://forms.gle/vaknivGTW56PQ7Nx7'
+              size='large'
+              type='primary'
               icon={<PlusOutlined />}
-              target="_blank"
+              target='_blank'
             >
               {t('actionBar-add')}
             </Button>
@@ -45,7 +45,7 @@ function App () {
                     display: 'flex',
                     justifyContent: 'center',
                     minHeight: '50px',
-                    alignItems: 'flex-end',
+                    alignItems: 'flex-end'
                   }}
                 >
                   <Col
@@ -57,7 +57,7 @@ function App () {
                       fontWeight: 'bold',
                       borderBottom: '2px solid #1890ff',
                       height: '100%',
-                      padding: '10px',
+                      padding: '10px'
                     }}
                   >
                     Explorar
@@ -75,7 +75,7 @@ function App () {
               md: 2,
               lg: 3,
               xl: 3,
-              xxl: 4,
+              xxl: 4
             }}
             loading={isLoading}
             dataSource={events}
@@ -88,11 +88,11 @@ function App () {
         </Content>
       </Layout>
     </Layout>
-  );
+  )
 }
 
-App.prototypes = {};
+App.prototypes = {}
 
-App.defaultProps = {};
+App.defaultProps = {}
 
-export default App;
+export default App

@@ -21,7 +21,10 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "flickr-sdk": "^3.9.0",
+<<<<<<< HEAD
     "fuse.js": "^6.4.0",
+=======
+>>>>>>> master
     "mongoose": "^5.9.20",
     "morgan": "~1.9.1",
     "multer": "^1.4.2",
