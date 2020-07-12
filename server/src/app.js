@@ -22,11 +22,6 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 //Passport Setup
-app.use(require("express-session")({
-  secret: "db8community",
-  resave: false,
-  saveUninitialized: false
-}));
 app.use(passport.initialize())
 app.use(passport.session())
 passport.use(new LocalStrategy(UserModel.authenticate()))
