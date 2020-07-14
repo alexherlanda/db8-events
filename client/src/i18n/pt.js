@@ -1,5 +1,6 @@
 const ptTranslation = {
   translation: {
+    'lng-name': 'Português',
     'actionBar-add': 'Novo',
   },
 };
