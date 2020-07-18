@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Row, Col, Typography, Button, Modal } from 'antd';
+import { useTranslation } from 'react-i18next';
 import CountryBadge from '../../atomic/CountryBadge';
 import Tags from '../../atomic/Tags';
 import DateRange from '../../atomic/DateRange';
@@ -9,6 +10,7 @@ const { Title } = Typography;
 function EventCard(props) {
   const { event } = props;
   const [showMoreInfo, setShowMoreInfo] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <Card
@@ -79,7 +81,7 @@ function EventCard(props) {
                     style={{ color: 'grey', fontSize: '11px' }}
                     onClick={() => setShowMoreInfo(true)}
                   >
-                    ver más
+                    {t('card-showMore')}
                   </div>
                 </div>
               </Col>
@@ -94,7 +96,7 @@ function EventCard(props) {
               </Col>
 
               <Col style={{ marginTop: 5 }} span={24}>
-                {'By ' + event.convenorsShortName}
+                {`${t('card-host')} ${event.convenorsShortName}`}
               </Col>
 
               <Col style={{ marginTop: 5 }} span={24}>
@@ -103,7 +105,11 @@ function EventCard(props) {
             </Row>
 
             <Row style={{ display: 'flex', justifyContent: 'center' }}>
-              <DateRange startDate={event.startDate} endDate={event.endDate} />
+              <DateRange
+                locale={t('key-code')}
+                startDate={event.startDate}
+                endDate={event.endDate}
+              />
             </Row>
             <Row
               gutter={[8, 8]}
@@ -122,7 +128,7 @@ function EventCard(props) {
                   target="_blank"
                   style={{ borderRadius: '12px' }}
                 >
-                  Saber más
+                  {`${t('card-button-knowMore')} `}
                 </Button>
               </Col>
               <Col xs={12} sm={12} md={12} lg={10} xl={8} xxl={8}>
@@ -133,7 +139,7 @@ function EventCard(props) {
                   target="_blank"
                   style={{ borderRadius: '12px' }}
                 >
-                  Registrarse
+                  {`${t('card-button-register')} `}
                 </Button>
               </Col>
             </Row>

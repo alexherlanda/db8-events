@@ -4,11 +4,10 @@ import { PlusOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../src/components/atomic/LanguageSelector';
 import './App.less';
-
 import { useQuery } from './hooks/useQuery';
-
 import SearchBar from './components/molecular/SearchBar';
 import EventCard from './components/molecular/EventCard';
+import { realEvents } from './models/events';
 
 function App() {
   const { Header, Content } = Layout;
@@ -30,7 +29,7 @@ function App() {
               icon={<PlusOutlined />}
               target="_blank"
             >
-              {t('actionBar-add')}
+              {t('main-addButton')}
             </Button>
           </Col>
         </Row>
@@ -63,7 +62,7 @@ function App() {
                       padding: '10px',
                     }}
                   >
-                    Explorar
+                    {t('main-bar-explore')}
                   </Col>
                 </Row>
               </Card>
@@ -81,7 +80,7 @@ function App() {
               xxl: 4,
             }}
             loading={isLoading}
-            dataSource={events}
+            dataSource={realEvents}
             renderItem={(event) => (
               <List.Item>
                 <EventCard event={event} />
