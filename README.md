@@ -48,11 +48,6 @@ This app is also possible beacuase the awesome teams of:
 
 DB8 is released under GNU GENERAL PUBLIC LICENSE Version 3
 
-## ✏️ Contributors
-
-- Itzel Gaona
-- Mariana Ruiz
-- Alexis Herlanda (alexherlanda)
 
 ### How to use
 
