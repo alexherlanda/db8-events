@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "JulianC606",
+      "name": "JulianC606",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/51425345?v=4",
+      "profile": "https://github.com/JulianC606",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "db8-events",
+  "projectOwner": "alexherlanda",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
