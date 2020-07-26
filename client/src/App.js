@@ -1,38 +1,27 @@
-import React from 'react';
-import { Layout, List, Card, Row, Col, Button } from 'antd';
-import { PlusOutlined } from '@ant-design/icons';
+import React, { useEffect } from 'react';
+import { Layout, List, Card, Row, Col } from 'antd';
 import { useTranslation } from 'react-i18next';
-import LanguageSelector from '../src/components/atomic/LanguageSelector';
 import './App.less';
 import { useQuery } from './hooks/useQuery';
 import SearchBar from './components/molecular/SearchBar';
 import EventCard from './components/molecular/EventCard';
-import { realEvents } from './models/events';
-
-function App() {
+import { listEventsRequest } from '../src/redux/actions/eventsActions';
+import { connect } from 'react-redux';
+import MainBar from './components/molecular/MainBar'
+function App(props) {
+  const { events: eventsR, listEventsRequest: listEventsReq } = props;
   const { Header, Content } = Layout;
   const [handlers, events, isLoading] = useQuery([]);
   const { t } = useTranslation();
 
+  useEffect(() => {
+    listEventsReq({ all: true });
+  }, [listEventsReq]);
+
   return (
     <Layout>
-      <Header style={{ padding: '0 22px' }}>
-        <Row justify="end" gutter={[8, 8]}>
-          <Col>
-            <LanguageSelector />
-          </Col>
-          <Col>
-            <Button
-              href="https://forms.gle/vaknivGTW56PQ7Nx7"
-              size="large"
-              type="primary"
-              icon={<PlusOutlined />}
-              target="_blank"
-            >
-              {t('main-addButton')}
-            </Button>
-          </Col>
-        </Row>
+      <Header style={{ padding: '0 22px' }} >
+        <MainBar />
       </Header>
       <Layout>
         <Content style={{ margin: 20 }}>
@@ -68,7 +57,7 @@ function App() {
               </Card>
             </Col>
           </Row>
-          <SearchBar handlers={handlers} />
+          {false && <SearchBar handlers={handlers} />}
           <List
             grid={{
               gutter: 16,
@@ -79,8 +68,8 @@ function App() {
               xl: 3,
               xxl: 4,
             }}
-            loading={isLoading}
-            dataSource={realEvents}
+            loading={eventsR.isLoading}
+            dataSource={eventsR.data}
             renderItem={(event) => (
               <List.Item>
                 <EventCard event={event} />
@@ -97,4 +86,10 @@ App.prototypes = {};
 
 App.defaultProps = {};
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    events: state.events.eventsList,
+  };
+}
+
+export default connect(mapStateToProps, { listEventsRequest })(App);

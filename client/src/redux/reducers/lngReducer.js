@@ -8,11 +8,11 @@
 
 let initial = { selected: 'es' };
 
-const climateCardsReducer = (state = initial, action) => {
+const lngReducer = (state = initial, action) => {
   switch (action.type) {
     default:
       return state;
   }
 };
 
-export default climateCardsReducer;
+export default lngReducer;
