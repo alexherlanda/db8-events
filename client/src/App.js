@@ -36,7 +36,7 @@ function App(props) {
                     display: 'flex',
                     justifyContent: 'center',
                     minHeight: '50px',
-                    alignItems: 'flex-end',
+                    alignItems: 'flex-end'
                   }}
                 >
                   <Col
@@ -48,7 +48,7 @@ function App(props) {
                       fontWeight: 'bold',
                       borderBottom: '2px solid #1890ff',
                       height: '100%',
-                      padding: '10px',
+                      padding: '10px'
                     }}
                   >
                     {t('main-bar-explore')}
@@ -57,7 +57,11 @@ function App(props) {
               </Card>
             </Col>
           </Row>
+<<<<<<< HEAD
           {false && <SearchBar handlers={handlers} />}
+=======
+          <SearchBar handlers={handlers} />
+>>>>>>> search_service
           <List
             grid={{
               gutter: 16,
@@ -66,10 +70,15 @@ function App(props) {
               md: 2,
               lg: 3,
               xl: 3,
-              xxl: 4,
+              xxl: 4
             }}
+<<<<<<< HEAD
             loading={eventsR.isLoading}
             dataSource={eventsR.data}
+=======
+            loading={isLoading}
+            dataSource={events}
+>>>>>>> search_service
             renderItem={(event) => (
               <List.Item>
                 <EventCard event={event} />
@@ -79,13 +88,14 @@ function App(props) {
         </Content>
       </Layout>
     </Layout>
-  );
+  )
 }
 
-App.prototypes = {};
+App.prototypes = {}
 
-App.defaultProps = {};
+App.defaultProps = {}
 
+<<<<<<< HEAD
 function mapStateToProps(state) {
   return {
     events: state.events.eventsList,
@@ -93,3 +103,6 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, { listEventsRequest })(App);
+=======
+export default App
+>>>>>>> search_service
