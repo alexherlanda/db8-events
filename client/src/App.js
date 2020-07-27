@@ -1,26 +1,26 @@
-import React, { useEffect } from 'react';
-import { Layout, List, Card, Row, Col } from 'antd';
-import { useTranslation } from 'react-i18next';
-import './App.less';
-import { useQuery } from './hooks/useQuery';
-import SearchBar from './components/molecular/SearchBar';
-import EventCard from './components/molecular/EventCard';
-import { listEventsRequest } from '../src/redux/actions/eventsActions';
-import { connect } from 'react-redux';
+import React, { useEffect } from 'react'
+import { Layout, List, Card, Row, Col } from 'antd'
+import { useTranslation } from 'react-i18next'
+import './App.less'
+import { useQuery } from './hooks/useQuery'
+import SearchBar from './components/molecular/SearchBar'
+import EventCard from './components/molecular/EventCard'
+import { listEventsRequest } from '../src/redux/actions/eventsActions'
+import { connect } from 'react-redux'
 import MainBar from './components/molecular/MainBar'
-function App(props) {
-  const { events: eventsR, listEventsRequest: listEventsReq } = props;
-  const { Header, Content } = Layout;
-  const [handlers, events, isLoading] = useQuery([]);
-  const { t } = useTranslation();
+function App (props) {
+  const { events: eventsR, listEventsRequest: listEventsReq } = props
+  const { Header, Content } = Layout
+  const [handlers, events, isLoading] = useQuery([])
+  const { t } = useTranslation()
 
   useEffect(() => {
-    listEventsReq({ all: true });
-  }, [listEventsReq]);
+    listEventsReq({ all: true })
+  }, [listEventsReq])
 
   return (
     <Layout>
-      <Header style={{ padding: '0 22px' }} >
+      <Header style={{ padding: '0 22px' }}>
         <MainBar />
       </Header>
       <Layout>
@@ -57,11 +57,7 @@ function App(props) {
               </Card>
             </Col>
           </Row>
-<<<<<<< HEAD
           {false && <SearchBar handlers={handlers} />}
-=======
-          <SearchBar handlers={handlers} />
->>>>>>> search_service
           <List
             grid={{
               gutter: 16,
@@ -72,13 +68,8 @@ function App(props) {
               xl: 3,
               xxl: 4
             }}
-<<<<<<< HEAD
             loading={eventsR.isLoading}
             dataSource={eventsR.data}
-=======
-            loading={isLoading}
-            dataSource={events}
->>>>>>> search_service
             renderItem={(event) => (
               <List.Item>
                 <EventCard event={event} />
@@ -95,14 +86,10 @@ App.prototypes = {}
 
 App.defaultProps = {}
 
-<<<<<<< HEAD
-function mapStateToProps(state) {
+function mapStateToProps (state) {
   return {
-    events: state.events.eventsList,
-  };
+    events: state.events.eventsList
+  }
 }
 
-export default connect(mapStateToProps, { listEventsRequest })(App);
-=======
-export default App
->>>>>>> search_service
+export default connect(mapStateToProps, { listEventsRequest })(App)
