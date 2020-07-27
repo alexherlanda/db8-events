@@ -1,5 +1,4 @@
 import EventModel from '../models/Event'
-<<<<<<< HEAD
 import FilterHandler from '../handlers/FilterHandler'
 import SearchHandler from '../handlers/SearchHandler'
 
@@ -18,14 +17,6 @@ export const readAllEvents = async (req, res) => {
     res.json({ queries, results })
   } catch (e) {
     // Handling errors
-=======
-
-export const readAllEvents = async (req, res) => {
-  try {
-    const events = await EventModel.find()
-    res.json(events)
-  } catch (e) {
->>>>>>> master
     console.error(e)
     res.status(500).json({
       error: e
