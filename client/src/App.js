@@ -69,7 +69,7 @@ function App (props) {
               xxl: 4
             }}
             loading={eventsR.isLoading}
-            dataSource={eventsR.data}
+            dataSource={eventsR.data.results}
             renderItem={(event) => (
               <List.Item>
                 <EventCard event={event} />
