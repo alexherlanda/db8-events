@@ -84,6 +84,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/alexherlanda"><img src="https://avatars0.githubusercontent.com/u/43116659?v=4" width="100px;" alt=""/><br /><sub><b>alexherlanda</b></sub></a><br /><a href="https://github.com/alexherlanda/db8-events/commits?author=alexherlanda" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/JulianC606"><img src="https://avatars3.githubusercontent.com/u/51425345?v=4" width="100px;" alt=""/><br /><sub><b>JulianC606</b></sub></a><br /><a href="https://github.com/alexherlanda/db8-events/commits?author=JulianC606" title="Code">💻</a></td>
   </tr>
 </table>
 
