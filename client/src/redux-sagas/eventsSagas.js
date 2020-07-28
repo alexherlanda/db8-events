@@ -26,5 +26,5 @@ function* listEventsRequestAsyncOrchestrator(action) {
    his ensures that the Saga will take at most one LIST_EVENTS_REQUEST action during each period
  */
 export function* watchSetActivePlace() {
-  yield throttle(1500, LIST_EVENTS_REQUEST, listEventsRequestAsyncOrchestrator);
+  yield throttle(5500, LIST_EVENTS_REQUEST, listEventsRequestAsyncOrchestrator);
 }

@@ -1,22 +1,22 @@
-import React, { useEffect } from 'react'
-import { Layout, List, Card, Row, Col } from 'antd'
-import { useTranslation } from 'react-i18next'
-import './App.less'
-import { useQuery } from './hooks/useQuery'
-import SearchBar from './components/molecular/SearchBar'
-import EventCard from './components/molecular/EventCard'
-import { listEventsRequest } from '../src/redux/actions/eventsActions'
-import { connect } from 'react-redux'
-import MainBar from './components/molecular/MainBar'
-function App (props) {
-  const { events: eventsR, listEventsRequest: listEventsReq } = props
-  const { Header, Content } = Layout
-  const [handlers, events, isLoading] = useQuery([])
-  const { t } = useTranslation()
+import React, { useEffect } from 'react';
+import { Layout, List, Card, Row, Col } from 'antd';
+import { useTranslation } from 'react-i18next';
+import './App.less';
+import { useQuery } from './hooks/useQuery';
+import SearchBar from './components/molecular/SearchBar';
+import EventCard from './components/molecular/EventCard';
+import { listEventsRequest } from '../src/redux/actions/eventsActions';
+import { connect } from 'react-redux';
+import MainBar from './components/molecular/MainBar';
+function App(props) {
+  const { events: eventsR, listEventsRequest: listEventsReq } = props;
+  const { Header, Content } = Layout;
+  const [handlers, events, isLoading] = useQuery([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
-    listEventsReq({ all: true })
-  }, [listEventsReq])
+    listEventsReq({ all: true });
+  }, [listEventsReq]);
 
   return (
     <Layout>
@@ -36,10 +36,11 @@ function App (props) {
                     display: 'flex',
                     justifyContent: 'center',
                     minHeight: '50px',
-                    alignItems: 'flex-end'
+                    alignItems: 'flex-end',
                   }}
                 >
                   <Col
+                    onClick={() => listEventsReq({ all: true })}
                     style={{
                       alignItems: 'flex-end',
                       display: 'flex',
@@ -48,7 +49,7 @@ function App (props) {
                       fontWeight: 'bold',
                       borderBottom: '2px solid #1890ff',
                       height: '100%',
-                      padding: '10px'
+                      padding: '10px',
                     }}
                   >
                     {t('main-bar-explore')}
@@ -66,7 +67,7 @@ function App (props) {
               md: 2,
               lg: 3,
               xl: 3,
-              xxl: 4
+              xxl: 4,
             }}
             loading={eventsR.isLoading}
             dataSource={eventsR.data.results}
@@ -79,17 +80,17 @@ function App (props) {
         </Content>
       </Layout>
     </Layout>
-  )
+  );
 }
 
-App.prototypes = {}
+App.prototypes = {};
 
-App.defaultProps = {}
+App.defaultProps = {};
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
   return {
-    events: state.events.eventsList
-  }
+    events: state.events.eventsList,
+  };
 }
 
-export default connect(mapStateToProps, { listEventsRequest })(App)
+export default connect(mapStateToProps, { listEventsRequest })(App);
