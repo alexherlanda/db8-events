@@ -4,6 +4,7 @@ import initialState from './initialState';
 import rootReducer from './reducers/rootReducer';
 // Redux-Saga Middleware
 import createSagaMiddleware from 'redux-saga';
+import rootSaga from '../redux-sagas/rootSaga';
 
 /**
  *  Configuration to debug reux with  ReduxDevTools
@@ -32,5 +33,7 @@ const store = createStore(
   initialState,
   compose(applyMiddleware(sagaMiddleware), ...enhancers)
 );
+
+sagaMiddleware.run(rootSaga);
 
 export default store;
