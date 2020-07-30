@@ -22,7 +22,7 @@ const codeMessage = {
 };
 
 let instance = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: '/',
   validateStatus: function (status) {
     return status < 500;
   },
