@@ -7,12 +7,13 @@
   ],
   "private": true,
   "scripts": {
-    "start": "npm-run-all client:build server:prod",
+    "start": "yarn workspace server server",
+    "build": "npm-run-all client:build server:build",
     "dev": "run-p client:dev server:dev",
-    "client:dev": "cd client && yarn start",
-    "client:build": "cd client && yarn build",
-    "server:prod": "cd server && yarn start",
-    "server:dev": "cd server && yarn watch:dev"
+    "client:dev": "yarn workspace client start",
+    "client:build": "yarn workspace client build ",
+    "server:dev": "yarn workspace server watch:dev",
+    "server:build": "yarn workspace server build"
   },
   "dependencies": {
     "npm-run-all": "^4.1.5"

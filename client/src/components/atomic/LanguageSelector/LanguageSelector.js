@@ -22,14 +22,12 @@ function LanguageSelector(props) {
   return (
     <Dropdown icon={<TranslationOutlined />} overlay={menu} trigger={['click']}>
       <Button
-        style={{ color: 'white' }}
+       
         type="text"
         size="middle"
-        icon={<TranslationOutlined />}
-      >
-        {t('lng-name')}
-        <DownOutlined />
-      </Button>
+        icon={<TranslationOutlined  style={{ color: 'white'}} />}
+      />
+      
     </Dropdown>
   );
 }

@@ -19,7 +19,7 @@ class FilterHandler {
   }
 
   activeFilter (event, all) {
-    return !all ? event.startDate >= new Date() : true
+    return !(all === 'true') ? event.startDate >= new Date() : true
   }
 
   countryFilter (event, countries) {
