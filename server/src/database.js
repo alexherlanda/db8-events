@@ -1,8 +1,7 @@
 import mongoose from 'mongoose'
-import { credentials } from './config/config'
 
 export const connectDB = () => {
-  mongoose.connect(credentials().database.uri, {
+  mongoose.connect(process.env.DATABASE_URI, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
