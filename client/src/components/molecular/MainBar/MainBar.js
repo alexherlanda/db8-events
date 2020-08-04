@@ -41,12 +41,11 @@ function MainBar(props) {
     >
       {isSearchCollapsed ? (
         <>
-          <Col span={8} />
-          <Col span={8} />
-          <Col span={8}>
-            <Row gutter={[8,8]}>
+          <Col span={6} />
+          <Col span={6} />
+          <Col span={12}>
+            <Row gutter={[16, 0]} justify="end">
               <Col
-                span={7}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -56,11 +55,11 @@ function MainBar(props) {
                 <Button
                   onClick={handleOpenSearch}
                   type="text"
+                  size="large"
                   icon={<SearchOutlined style={{ color: 'white' }} />}
                 />
               </Col>
               <Col
-                span={7}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -70,7 +69,6 @@ function MainBar(props) {
                 <LanguageSelector />
               </Col>
               <Col
-                span={10}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -78,10 +76,17 @@ function MainBar(props) {
                 }}
               >
                 <Button
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    borderRadius: '50%',
+                  }}
                   href="https://forms.gle/vaknivGTW56PQ7Nx7"
                   type="primary"
                   icon={<PlusOutlined />}
                   target="_blank"
+                  size="large"
                 />
               </Col>
             </Row>
@@ -89,24 +94,35 @@ function MainBar(props) {
         </>
       ) : (
         <>
-          <Col xs={4} sm={4} md={4} lg={6} xl={7} xxl={7}>
+          <Col
+            xs={2}
+            sm={2}
+            md={4}
+            lg={6}
+            xl={7}
+            xxl={7}
+            style={{ display: 'flex', justifyContent: 'flex-end' }}
+          >
             <Button
+              size="large"
               onClick={handleCloseSearch}
               type="text"
               icon={<ArrowLeftOutlined style={{ color: 'white' }} />}
             />
           </Col>
-          <Col xs={16} sm={16} md={16} lg={12} xl={10} xxl={10}>
-            <div style={isSearchCollapsed ? searchIsCloseStyle : searchIsOpenStyle}>
+          <Col xs={20} sm={20} md={16} lg={12} xl={10} xxl={10}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
               <Search
+                style={{ width: '95%' }}
                 autoFocus
                 placeholder="Search by name or host"
                 onSearch={handleSearch}
                 onChange={handleSearchOnChange}
+                size="large"
               />
             </div>
           </Col>
-          <Col xs={4} sm={4} md={4} lg={6} xl={7} xxl={7} />
+          <Col xs={2} sm={2} md={4} lg={6} xl={7} xxl={7} />
         </>
       )}
     </Row>

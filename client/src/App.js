@@ -20,7 +20,7 @@ function App(props) {
 
   return (
     <Layout>
-      <Header style={{ padding: '0 22px' }}>
+      <Header style={{ padding: '0 15px' }}>
         <MainBar />
       </Header>
       <Layout>

@@ -20,11 +20,10 @@ function LanguageSelector(props) {
   );
 
   return (
-    <Dropdown icon={<TranslationOutlined />} overlay={menu} trigger={['click']}>
+    <Dropdown size="large" icon={<TranslationOutlined />} overlay={menu} trigger={['click']}>
       <Button
-       
         type="text"
-        size="middle"
+        size="large"
         icon={<TranslationOutlined  style={{ color: 'white'}} />}
       />
       
