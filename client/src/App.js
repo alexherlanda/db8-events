@@ -15,7 +15,7 @@ function App(props) {
   const { t } = useTranslation();
 
   useEffect(() => {
-    listEventsReq({ all: true });
+    listEventsReq();
   }, [listEventsReq]);
 
   return (
@@ -40,7 +40,7 @@ function App(props) {
                   }}
                 >
                   <Col
-                    onClick={() => listEventsReq({ all: true })}
+                    onClick={() => listEventsReq()}
                     style={{
                       alignItems: 'flex-end',
                       display: 'flex',
