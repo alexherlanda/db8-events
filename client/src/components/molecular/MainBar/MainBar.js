@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Button, Row, Col, Input } from 'antd';
 import LanguageSelector from '../../atomic/LanguageSelector';
 import { ArrowLeftOutlined, SearchOutlined, PlusOutlined } from '@ant-design/icons';
-import { searchIsOpenStyle, searchIsCloseStyle } from './styles';
 import { connect } from 'react-redux';
 import { listEventsRequest } from '../../../redux/actions/eventsActions';
 

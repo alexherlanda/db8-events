@@ -9,9 +9,9 @@ import { listEventsRequest } from '../src/redux/actions/eventsActions';
 import { connect } from 'react-redux';
 import MainBar from './components/molecular/MainBar';
 function App(props) {
-  const { events: eventsR, listEventsRequest: listEventsReq } = props;
+  const { events, listEventsRequest: listEventsReq } = props;
   const { Header, Content } = Layout;
-  const [handlers, events, isLoading] = useQuery([]);
+  const [handlers,] = useQuery([]);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -69,8 +69,8 @@ function App(props) {
               xl: 3,
               xxl: 4,
             }}
-            loading={eventsR.isLoading}
-            dataSource={eventsR.data.results}
+            loading={events.isLoading}
+            dataSource={events.data.results}
             renderItem={(event) => (
               <List.Item>
                 <EventCard event={event} />
