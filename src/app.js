@@ -8,6 +8,9 @@ import { connectDB } from './database'
 import passport from 'passport'
 import LocalStrategy from 'passport-local'
 import UserModel from './models/User'
+const cors = require("cors");
+
+app.use(cors({ origin: true }));
 
 const app = express()
 dotenv.config()
