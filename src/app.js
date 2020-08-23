@@ -8,9 +8,7 @@ import { connectDB } from './database'
 import passport from 'passport'
 import LocalStrategy from 'passport-local'
 import UserModel from './models/User'
-const cors = require("cors");
-
-app.use(cors({ origin: true }));
+const cors = require('cors')
 
 const app = express()
 dotenv.config()
@@ -19,9 +17,10 @@ dotenv.config()
 connectDB()
 
 // Middlewares
+app.use(cors({ origin: true }))
 app.use(logger('dev'))
-app.use(express.json({limit: '50mb', extended: true}))
-app.use(express.urlencoded({limit: '50mb', extended: false, parameterLimit: 50000 }))
+app.use(express.json({ limit: '50mb', extended: true }))
+app.use(express.urlencoded({ limit: '50mb', extended: false, parameterLimit: 50000 }))
 app.use(cookieParser())
 
 // Passport Setup
