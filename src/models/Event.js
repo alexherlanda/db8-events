@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose'
+import { Schema, model } from 'mongoose';
 
 const eventSchema = new Schema({
   convenorsShortName: String,
@@ -12,11 +12,12 @@ const eventSchema = new Schema({
   infoLink: String,
   name: String,
   shortName: String,
-  registerLink: String,
   reunionSpot: { type: String, default: '-' },
-  tags: [{ key: String, text: String }]
-})
+  tags: [{ key: String, text: String }],
+  linkCollection: [{ label: String, link: String }],
+  coverStyle: Object,
+});
 
-const EventModel = model('Event', eventSchema)
+const EventModel = model('Event', eventSchema);
 
-export default EventModel
+export default EventModel;
